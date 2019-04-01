@@ -1,0 +1,91 @@
+define 
+
+#Classes
+
+person sub entity
+has person-id
+has person-name
+plays user
+plays logged-user;
+
+place sub entity
+has place-id
+has place-name
+has place-latitude
+has place-longitude
+plays logged-place
+plays city-place;
+
+activity sub entity
+has activity-id
+has activity-name
+plays logged-activity
+plays recommended-activity;
+
+city sub entity
+has city-id
+has city-name
+plays place-city
+plays recommendation-city;
+
+#Attributes
+
+person-id   sub attribute
+datatype long;
+
+person-name sub attribute
+datatype string;
+
+place-id sub attribute
+datatype long;
+
+place-name sub attribute
+datatype string;
+
+place-latitude sub attribute
+datatype double;
+
+place-longitude sub attribute
+datatype double;
+
+activity-id sub attribute
+datatype long;
+
+activity-name sub attribute
+datatype string;
+
+city-id sub attribute
+datatype long;
+
+city-name sub attribute
+datatype string;
+
+#Roles
+user                 sub role;
+logged-user          sub role;
+logged-activity      sub role;
+logged-place         sub role;
+city-place           sub role;
+place-city           sub role;
+recommended-activity sub role;
+recommendation-city  sub role;
+
+#Relationship
+
+activity-log sub relationship
+relates logged-user
+relates logged-activity
+relates logged-place;
+
+place-is-in-city sub relationship
+relates city-place
+relates place-city;
+
+personal-activity-recommendation sub relationship
+relates user
+relates recommended-activity
+relates recommendation-city;
+
+city-activity-recommendation sub relationship
+relates recommended-activity
+relates recommendation-city;

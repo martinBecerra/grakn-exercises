@@ -1,0 +1,24 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class Actor {
+
+	public static Input template() {
+		
+		static String FILE_PATH = "/movie_files/diseases";
+		static String ID_KEY    = "id";
+		static String NAME_KEY  = "name";
+		
+		return new Input() {
+			
+			@Override
+			public String template(Json data) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+		
+	}
+}

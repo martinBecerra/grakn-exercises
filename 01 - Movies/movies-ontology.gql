@@ -1,0 +1,92 @@
+define
+
+#Classes
+
+Movie sub entity
+has movie-id
+has movie-name
+plays film
+plays movie-recommended
+plays movie-watched;
+
+Person sub entity
+has person-id
+has person-name
+plays user;
+
+Genre sub entity
+has genre-id
+has genre-name
+plays movie-genre;
+
+Actor sub entity
+has actor-id
+has actor-name
+plays cast
+plays favorite-actor;
+
+#Attributes
+
+movie-id sub attribute
+datatype long;
+
+movie-name sub attribute
+datatype string;
+
+person-id sub attribute
+datatype long;
+
+person-name sub attribute
+datatype string;
+
+genre-id sub attribute
+datatype long;
+
+genre-name sub attribute
+datatype string;
+
+actor-id sub attribute
+datatype long;
+
+actor-name sub attribute
+datatype string;
+
+
+#Roles
+
+film sub role;
+movie-recommended sub role;
+movie-watched sub role;
+user sub role;
+
+cast sub role;
+favorite-actor sub role;
+
+movie-genre sub role;
+
+
+#Relationships
+
+movie-recommendation sub relationship
+relates user
+relates movie-recommended;
+
+watch sub relationship
+relates user
+relates movie-watched;
+
+movie-recommendation-by-fav-actor sub relationship
+relates user
+relates movie-recommended;
+
+is-cast-of-movie sub relationship
+relates cast
+relates film;
+
+is-favorite-actor sub relationship
+relates favorite-actor
+relates user;
+
+belongs-to-genre sub relationship
+relates film
+relates movie-genre;

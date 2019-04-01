@@ -1,0 +1,25 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class Patient {
+
+	static String ID_KEY = "id";
+	
+	
+	public static Input template() {
+		
+		return new Input("src/main/resources/patient-data-patients") {
+			
+			@Override
+			public String template(Json person) {
+				// TODO Auto-generated method stub
+				return "insert $person isa person, "
+						+ "has person-id " + person.at(ID_KEY) + 
+						  "has name " + person.at("name");
+			}
+		};
+		
+	} 
+}

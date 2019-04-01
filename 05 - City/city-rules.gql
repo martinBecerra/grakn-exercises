@@ -1,0 +1,22 @@
+define
+
+#Rules
+
+activity-recommendation-in-city-inference-rule sub rule
+when {
+    (logged-user:$user,logged-activity:$activity,logged-place:$place) isa activity-log;
+    (city-place:$place, place-city:$city) isa place-is-in-city; 
+}
+then {
+   (recommended-activity:$activity, recommendation-city:$city) isa city-activity-recommendation;
+};
+
+personal-recommendation-inference-rule sub rule
+when {
+    (logged-user:$user,logged-activity:$activity,logged-place:$place) isa activity-log;
+    (recommended-activity:$other_activity, recommendation-city:$city) isa city-activity-recommendation;
+    $activity != $other_activity;
+}
+then{
+    (user:$user,recommended-activity:$activity,recommendation-city:$city) isa personal-activity-recommendation;
+};

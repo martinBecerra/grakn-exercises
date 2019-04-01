@@ -1,0 +1,21 @@
+define
+
+#Rules
+
+medicine-cure-disease-rule sub rule 
+when {
+    (described-disease:$disease, disease-symptom: $sympton) isa disease-includes;
+    (relieved-symptom:$sympton,prescribed-medicine:$medicine) isa relieve-symptom;
+}
+then {
+    (cured-disease:$disease,recommended-medicine:$medicine) isa cure-disease; 
+};
+
+medicine-recommendation-rule sub rule
+when {
+    (patient:$patient,suffered-disease:$disease) isa patient-diagnosis;
+    (cured-disease:$disease,recommended-medicine:$medicine) isa cure-disease;
+}
+then {
+     (patient:$patient,recommended-medicine:$medicine) isa medicine-recommendation;
+};

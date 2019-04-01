@@ -1,0 +1,143 @@
+define
+
+#Classes
+
+Book sub entity
+    has book-id
+    has book-name
+    has release-year
+    plays released-book
+    plays linked-book
+    plays book-publication
+    plays referenced-book
+    plays authored-book
+    plays classified-book;
+
+Category sub entity
+    has category-id
+    has category-name
+    plays book-category;
+
+Topic sub entity
+    has topic-id
+    has topic-name
+    plays book-topic
+    plays linked-topic;
+
+Editorial sub entity
+    has editorial-id
+    has editorial-name
+    plays book-publisher;
+
+Keyword sub entity
+    has keyword-id
+    has keyword-name
+    plays book-keyword
+    plays topic-keyword;
+
+Author sub entity
+    has author-id
+    has author-name
+    plays book-author
+    plays author-influencer
+    plays influenced-author;
+
+#Attributes
+
+book-id sub attribute
+    datatype long;
+
+book-name sub attribute
+    datatype string;
+
+release-year sub attribute
+    datatype long;
+
+category-id sub attribute
+    datatype long;
+
+category-name sub attribute
+    datatype string;
+
+topic-id sub attribute
+    datatype long;
+
+topic-name sub attribute
+    datatype string;
+
+editorial-id sub attribute
+    datatype long;
+
+editorial-name sub attribute
+    datatype string;
+
+keyword-id sub attribute
+    datatype long;
+
+keyword-name sub attribute
+    datatype string;
+
+author-id sub attribute
+    datatype long;
+
+author-name sub attribute
+    datatype string;
+
+
+#Roles
+
+released-book      sub role;
+book-publisher     sub role;
+book-keyword       sub role;
+linked-book        sub role;
+linked-topic       sub role;
+book-publication   sub role;
+referenced-book    sub role;
+book-author        sub role;
+authored-book      sub role;
+author-influencer  sub role;
+influenced-author  sub role;
+book-category      sub role;
+classified-book    sub role;
+book-category      sub role;
+
+# Relationships
+
+published-by sub relationship
+    relates released-book
+    relates book-publisher;
+
+book-keyword-link sub relationship
+    relates book-keyword
+    relates linked-book;
+
+topic-keyword-link sub relationship
+    relates topic-keyword
+    relates linked-topic;
+
+book-topic-link sub relationship
+    relates book-topic
+    relates linked-book;
+
+reference-link sub relationship
+    relates book-publication
+    relates referenced-book;
+
+is-author sub relationship
+    relates book-author
+    relates authored-book;
+
+is-category-of sub relationship
+    relates book-category
+    relates classified-book;
+
+influence sub relationship
+    relates author-influencer
+    relates influenced-author;
+
+
+
+
+
+
+    

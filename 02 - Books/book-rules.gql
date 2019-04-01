@@ -1,0 +1,21 @@
+define
+
+author-influences-inference-rule sub rule
+when {
+    (book-author: $author, authored-book: $book) isa is-author;
+    (book-publication:$book, referenced-book:$referencedBook) isa reference-link;
+    (book-author: $influencer, authored-book: $referencedBook) isa is-author;
+}
+then {
+	(author-influencer: $influencer, influenced-author: $author) isa influence;
+};
+
+
+book-topic-inference-rule sub rule 
+when {
+    (book-keyword:$keyword,linked-book:$book) isa book-keyword-link;
+    (topic-keyword:$keyword,linked-topic:$topic) isa topic-keyword-link;
+}
+then {
+    (book-topic:$topic,linked-book:$book)isa book-topic-link;
+};

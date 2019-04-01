@@ -1,0 +1,27 @@
+
+#Explore books from topics
+
+match $topic isa Topic has topic-name $name;get $name;
+
+
+match $topic isa Topic has topic-name "Knowledge Representation";
+      $book  isa Book has book-name $name;
+      (book-topic:$topic,linked-book:$book) isa book-topic-link;get $name;
+
+# Explore books from Keyword
+
+match $keyword isa Keyword has keyword-name "Ontology";
+      $book has book-name $name;
+      (book-keyword:$keyword,linked-book:$book) isa book-keyword-link;get $name;
+
+
+# From specific book result explore Influences to search their books
+
+match $book has book-name "Artificial Intelligence A Modern Approach";
+      $influencer has author-name $name;
+      (book-author: $author, authored-book:$book) isa is-author;
+      (author-influencer: $influencer, influenced-author: $author) isa influence;get $name;
+
+match $author has author-name "Malik Ghallab";
+    (book-author: $author, authored-book:$book) isa is-author;
+    $book has book-name $name; get $name;

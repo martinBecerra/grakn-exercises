@@ -1,0 +1,86 @@
+define
+
+#Classes
+
+Person sub entity
+has person-id
+has person-name
+plays patient;
+
+Disease sub entity
+has disease-id
+has disease-name
+plays suffered-disease
+plays described-disease
+plays cured-disease;
+
+Symptom sub entity
+has symptom-id
+has symptom-name
+plays disease-symptom
+plays relieved-symptom;
+
+Medicine sub entity
+has medicine-id
+has medicine-name
+plays recommended-medicine
+plays prescribed-medicine;
+
+#Attributes
+
+person-name sub attribute
+datatype string;
+
+disease-name sub attribute
+datatype string;
+
+symptom-name sub attribute
+datatype string;
+
+medicine-name sub attribute
+datatype string;
+
+person-id sub attribute
+datatype long;
+
+disease-id sub attribute
+datatype long;
+
+symptom-id sub attribute
+datatype long;
+
+medicine-id sub attribute
+datatype long;
+
+#Roles
+
+patient              sub role;
+suffered-disease     sub role;
+described-disease    sub role;
+disease-symptom      sub role;
+relieved-symptom     sub role;
+prescribed-medicine  sub role;
+cured-disease        sub role;
+recommended-medicine sub role;
+
+#Relationships
+
+patient-diagnosis sub relationship 
+relates patient
+relates suffered-disease;
+
+disease-includes sub relationship
+relates described-disease
+relates disease-symptom;
+
+relieve-symptom sub relationship
+relates prescribed-medicine
+relates relieved-symptom;
+
+cure-disease sub relationship
+relates cured-disease
+relates recommended-medicine;
+
+medicine-recommendation sub relationship
+relates patient
+relates recommended-medicine;

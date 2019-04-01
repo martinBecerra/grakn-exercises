@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;02-book-data-migration/src/main/resources/book-files&apos; to &apos;book_files&apos;" description="Rename resource &apos;book-files&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/book-files" name="book_files" stamp="1554073670134" updateReferences="true"/>
+</session>

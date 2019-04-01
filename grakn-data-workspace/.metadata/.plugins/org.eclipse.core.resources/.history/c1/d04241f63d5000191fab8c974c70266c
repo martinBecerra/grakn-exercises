@@ -1,0 +1,26 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class DiseaseSymptomRelation {
+
+	static String FILE_PATH  = "/patient_files/disease-symptom";
+	static String DISEASE_ID_KEY = "id";
+	static String NAME_KEY  = "name";
+	
+	public static Input template() {
+		
+		return new Input(FILE_PATH) {
+			
+			@Override
+			public String template(Json disease) {
+				
+				return "insert $disease isa disease"
+						+ " has disease-id " + disease.at(ID_KEY).asInteger() + 
+						  " has disease-name \"" + disease.at(NAME_KEY).asString() + "\";";
+			}
+		};
+		
+	} 
+}

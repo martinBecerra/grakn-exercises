@@ -1,0 +1,23 @@
+define
+
+#Rules
+
+skill-needs-inference-rule sub rule 
+when {
+    (user:$user,chosen-career:$career)            isa choose-career;
+    (career-profile:$career,career-skill:$skill)  isa requiere-skill;
+}
+then {
+    (user:$user, needed-skill:$skill) isa needs-develop;
+};
+
+course-recommendation-inference-rule sub rule 
+when {
+    (user:$user, needed-skill:$skill)             isa needs-develop;
+    (developed-skill:$skill,skill-course:$course) isa develop-skill;
+    (user:$user, approved-course:$approvedCourse) isa approves-courses;
+    $course != $approvedCourse;
+}
+then {
+    (course-student:$user, recommended-course:$course) isa course-recommendation;
+};

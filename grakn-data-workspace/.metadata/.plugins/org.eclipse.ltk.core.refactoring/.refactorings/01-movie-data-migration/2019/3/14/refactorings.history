@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;migrator&apos; to &apos;02-book-data-migration/src/main/java&apos;&#x0A;- Original project: &apos;01-movie-data-migration&apos;&#x0A;- Destination element: &apos;02-book-data-migration/src/main/java&apos;&#x0A;- Original element: &apos;01-movie-data-migration/src/main/java/migrator&apos;" description="Copy package" destination="=02-book-data-migration/src\/main\/java" element1="/src\/main\/java&lt;migrator" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1554073614215" version="1.0"/>
+</session>

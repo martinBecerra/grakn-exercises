@@ -1,0 +1,23 @@
+define
+
+movie-recommendation-by-genre-rule sub rule
+when {
+    (user: $user, movie-watched:$movieWatched) isa watch;
+    (film:$movieWatched, movie-genre:$genre) isa belongs-to-genre;
+    (film:$movie, movie-genre:$genre) isa belongs-to-genre;
+    $movieWatched != $movie;
+}
+then {
+    (user: $user, movie-recommended: $movie) isa movie-recommendation;
+};
+
+movie-recommendation-by-fav-actor-rule sub rule
+when {
+    (favorite-actor: $act, user:$user) isa is-favorite-actor;
+    (cast:$act, film:$movie) isa is-cast-of-movie;
+    (user:$user, movie-watched:$movieWatched) isa watch;
+    $movieWatched != $movie;
+}
+then {
+    (user:$user, movie-recommended:$movie) isa movie-recommendation-by-fav-actor;
+};

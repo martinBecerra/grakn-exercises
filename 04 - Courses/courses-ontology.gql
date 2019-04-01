@@ -1,0 +1,85 @@
+define
+
+#Classes
+
+person sub entity
+has person-name
+plays user
+plays course-student;
+
+career sub entity
+has career-name
+plays chosen-career
+plays career-profile;
+
+skill sub entity
+has skill-name
+plays career-skill
+plays developed-skill
+plays needed-skill;
+
+course sub entity
+has course-name
+plays skill-course
+plays approved-course
+plays recommended-course;
+#Attributes
+
+person-name sub attribute
+datatype string;
+
+career-name sub attribute
+datatype string;
+
+skill-name sub attribute
+datatype string;
+
+course-name sub attribute
+datatype string;
+
+final-mark sub attribute
+datatype long;
+
+#Roles
+
+user               sub role;
+chosen-career      sub role;
+career-skill       sub role;
+career-profile     sub role;
+developed-skill    sub role;
+skill-course       sub role;
+course-student     sub role;
+recommended-course sub role;
+needed-skill       sub role;
+approved-course    sub role;
+
+#Relationships
+
+choose-career sub relationship
+relates user
+relates chosen-career;
+
+requiere-skill sub relationship
+relates career-profile
+relates career-skill;
+
+develop-skill sub relationship
+relates developed-skill
+relates skill-course;
+
+approves-courses sub relationship
+relates user
+relates approved-course
+has final-mark;
+
+course-recommendation sub relationship
+relates course-student
+relates recommended-course;
+
+needs-develop sub relationship
+relates user
+relates needed-skill;
+
+
+
+

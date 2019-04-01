@@ -1,0 +1,26 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class Symptom {
+	
+	static String ID_KEY   = "id";
+	static String NAME_KEY = "name";
+
+	public static Input template() {
+		
+		
+		
+		return new Input("") {
+			
+			@Override
+			public String template(Json sympton) {
+				
+				return "insert $sympton isa person, "
+						+ "has person-id " + sympton.at(ID_KEY) + 
+						  "has name " + sympton.at(NAME_KEY);
+			}
+		};
+	} 
+}

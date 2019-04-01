@@ -1,0 +1,28 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class RelievedSymptomRelation {
+
+	static String FILE_PATH  = "/patient_files/relieved-symptom";
+	static String MEDICINE_ID_KEY  = "medicine";
+	static String SYMPTOM_ID_KEY  = "symptom";
+	
+	public static Input template() {
+		
+		return new Input(FILE_PATH) {
+			
+			@Override
+			public String template(Json relationship) {
+				
+				return "match "
+						+ "$medicine isa medicine has medicine-id " + relationship.at(DISEASE_ID_KEY).asInteger() + ";" 
+						+ "$symptom isa symptom has symptom-id " + relationship.at(SYMPTOM_ID_KEY).asInteger() + ";"
+						+ "insert (described-disease:$disease, disease-symptom:$symptom) isa disease-includes;";
+				
+			}
+		};
+		
+	} 
+}

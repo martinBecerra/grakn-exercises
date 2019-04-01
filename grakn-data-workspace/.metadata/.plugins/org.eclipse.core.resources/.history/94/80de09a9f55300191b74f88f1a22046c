@@ -1,0 +1,28 @@
+package templates;
+
+import migrator.Input;
+import mjson.Json;
+
+public class Actor {
+
+	public static Input template() {
+		
+		static String FILE_PATH = "/movie_files/actors";
+		static String ID_KEY    = "id";
+		static String NAME_KEY  = "name";
+		
+		return new Input() {
+			
+			@Override
+			public String template(Json data) {
+				
+				$downey isa Actor has actor-name
+				
+				return "insert $actor isa actor"
+						+ " has disease-id " + disease.at(ID_KEY).asInteger() + 
+						  " has disease-name \"" + disease.at(NAME_KEY).asString() + "\";";
+			}
+		};
+		
+	}
+}

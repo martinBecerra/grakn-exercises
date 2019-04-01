@@ -1,0 +1,9 @@
+match $disease isa Disease has disease-name $name;get $name; 
+
+match $disease isa Disease has disease-name "flu";
+      $person isa Person  has person-name $name;
+      (patient:$person,suffered-disease:$disease) isa patient-diagnosis;get $name;
+
+match $person isa Person has person-name "Jessica";
+      $medicine has medicine-name $name;
+      (patient:$person, recommended-medicine:$medicine) isa medicine-recommendation;get $name;

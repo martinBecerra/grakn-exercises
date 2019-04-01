@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="templates.Disease"/>
+<fullyQualifiedTypeName name="templates.Patient"/>
+<fullyQualifiedTypeName name="templates.Medicine"/>
+<fullyQualifiedTypeName name="templates.Symptom"/>
+<fullyQualifiedTypeName name="ai.grakn.util.SimpleURI"/>
+<fullyQualifiedTypeName name="ai.grakn.Keyspace"/>
+<fullyQualifiedTypeName name="ai.grakn.client.Grakn"/>
+<fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+<fullyQualifiedTypeName name="ai.grakn.GraknTxType"/>
+<fullyQualifiedTypeName name="com.univocity.parsers.csv.CsvParserSettings"/>
+<fullyQualifiedTypeName name="com.univocity.parsers.csv.CsvParser"/>
+<fullyQualifiedTypeName name="java.io.Reader"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.yarn.api.records.URL"/>
+<fullyQualifiedTypeName name="migrator.CSVParser"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="templates.DiseaseSymptomRelation"/>
+<fullyQualifiedTypeName name="templates.PatientDiseaseRelation"/>
+<fullyQualifiedTypeName name="templates.RelievedSymptomRelation"/>
+<fullyQualifiedTypeName name="migrator.Input"/>
+<fullyQualifiedTypeName name="templates.Actor"/>
+<fullyQualifiedTypeName name="templates.Genre"/>
+<fullyQualifiedTypeName name="templates.Movie"/>
+<fullyQualifiedTypeName name="templates.FavoriteActorRelationship"/>
+<fullyQualifiedTypeName name="templates.MovieCastRelationship"/>
+<fullyQualifiedTypeName name="templates.MovieGenreRelationship"/>
+<fullyQualifiedTypeName name="templates.MovieWatchedRelationship"/>
+<fullyQualifiedTypeName name="templates.Keyword"/>
+<fullyQualifiedTypeName name="templates.Topic"/>
+<fullyQualifiedTypeName name="templates.BookAuthorRelationship"/>
+<fullyQualifiedTypeName name="templates.BookEditorialRelationship"/>
+<fullyQualifiedTypeName name="templates.BookKeywordRelationship"/>
+<fullyQualifiedTypeName name="templates.BookReferenceRelationship"/>
+<fullyQualifiedTypeName name="templates.CategoryBookRelationship"/>
+<fullyQualifiedTypeName name="templates.TopicKeywordRelationship"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="templates.Author"/>
+<fullyQualifiedTypeName name="templates.Book"/>
+<fullyQualifiedTypeName name="templates.Category"/>
+<fullyQualifiedTypeName name="templates.Editorial"/>
+</qualifiedTypeNameHistroy>

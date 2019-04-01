@@ -1,0 +1,11 @@
+package templates;
+
+public class Person {
+
+	static String FILE_PATH = "/movie_files/genres";
+	static String ID_KEY    = "id";
+	static String NAME_KEY  = "name";
+	
+	
+	
+}
