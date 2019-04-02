@@ -1,8 +1,14 @@
+#Explore diseases
+
 match $disease isa Disease has disease-name $name;get $name; 
+
+#Explore who suffer flu disease
 
 match $disease isa Disease has disease-name "flu";
       $person isa Person  has person-name $name;
       (patient:$person,suffered-disease:$disease) isa patient-diagnosis;get $name;
+
+#Get medicine recommendations
 
 match $person isa Person has person-name "Jessica";
       $medicine has medicine-name $name;

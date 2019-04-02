@@ -47,4 +47,8 @@
 <fullyQualifiedTypeName name="templates.Course"/>
 <fullyQualifiedTypeName name="templates.Career"/>
 <fullyQualifiedTypeName name="templates.Skill"/>
+<fullyQualifiedTypeName name="templates.ApprovedCourseRelationship"/>
+<fullyQualifiedTypeName name="templates.CareerSkillRelationship"/>
+<fullyQualifiedTypeName name="templates.SkillCourseRelationship"/>
+<fullyQualifiedTypeName name="templates.UserCareerRelationship"/>
 </qualifiedTypeNameHistroy>

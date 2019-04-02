@@ -1,27 +1,33 @@
-match $user isa Person has person-name "Martin"; 
-(user:$user, movie-recommended:$movie) isa movie-recommendation;
-$movie has movie-name $name; get $name;
+#Explore movies watched
 
-
-match $user isa Person has person-name "Martin"; 
-(user:$user, movie-watched:$movie) isa watch;
-$movie has movie-name $name; get $name;
-
+match $user isa Person; get;
 
 match $user isa Person has person-name "Martin"; 
-(user:$user, movie-watched:$movie) isa watch;
-(film:$movie,movie-genre:$genre) isa belongs-to-genre;
-$genre has genre-name $name; get $name;
+(user:$user, movie-watched:$movie) isa watch; get;
+
+#Explore movies recommended
+
+match $user isa Person; get;
+
+match $user isa Person has person-name "Martin"; 
+(user:$user, movie-recommended:$movie) isa movie-recommendation; get;
+
+
+#Explore favorites actors
 
 match $user isa Person has person-name "Martin"; 
 (favorite-actor: $act, user:$user) isa is-favorite-actor;
 $act has actor-name $name;get $name;
+
+#Explore favorites actors movies
 
 match $user isa Person has person-name "Martin"; 
 (favorite-actor: $act, user:$user) isa is-favorite-actor;
 (cast:$act, film:$movie) isa is-cast-of-movie;
 $movie has movie-name $name;get $name;
 
+
+#Explore favorites actors movies recommendation
 
 match $user isa Person has person-name "Martin"; 
 (user:$user, movie-recommended:$movie) isa movie-recommendation-by-fav-actor;

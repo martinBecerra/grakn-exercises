@@ -15,7 +15,8 @@ course-recommendation-inference-rule sub rule
 when {
     (user:$user, needed-skill:$skill)              isa needs-develop;
     (developed-skill:$skill,skill-course:$course)  isa develop-skill;
-    #(user:$user, approved-course:$approved_course) isa approves-courses;
+    (user:$user, approved-course:$approvedCourse) isa approves-courses;
+    $approvedCourse != $course;
 }
 then {
     (course-student:$user, recommended-course:$course) isa course-recommendation;
