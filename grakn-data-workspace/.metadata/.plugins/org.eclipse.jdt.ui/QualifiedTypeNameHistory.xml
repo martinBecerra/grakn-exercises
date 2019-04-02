@@ -51,4 +51,9 @@
 <fullyQualifiedTypeName name="templates.CareerSkillRelationship"/>
 <fullyQualifiedTypeName name="templates.SkillCourseRelationship"/>
 <fullyQualifiedTypeName name="templates.UserCareerRelationship"/>
+<fullyQualifiedTypeName name="templates.Activity"/>
+<fullyQualifiedTypeName name="templates.City"/>
+<fullyQualifiedTypeName name="templates.Place"/>
+<fullyQualifiedTypeName name="templates.ActivityLogRelationship"/>
+<fullyQualifiedTypeName name="templates.PlaceCityRelationship"/>
 </qualifiedTypeNameHistroy>

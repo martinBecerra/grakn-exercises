@@ -2,13 +2,13 @@ define
 
 #Classes
 
-person sub entity
+Person sub entity
 has person-id
 has person-name
 plays user
 plays logged-user;
 
-place sub entity
+Place sub entity
 has place-id
 has place-name
 has place-latitude
@@ -16,13 +16,13 @@ has place-longitude
 plays logged-place
 plays city-place;
 
-activity sub entity
+Activity sub entity
 has activity-id
 has activity-name
 plays logged-activity
 plays recommended-activity;
 
-city sub entity
+City sub entity
 has city-id
 has city-name
 plays place-city

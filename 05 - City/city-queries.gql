@@ -1,0 +1,28 @@
+#Explore person activities
+
+match $person isa Person;get;
+
+match 
+$user has person-name "Nicolas";
+(logged-user:$user,logged-activity:$activity,logged-place:$place) isa activity-log;get;
+
+#Get personal recommendations
+
+match 
+$user has person-name "Nicolas";
+(user:$user,recommended-activity:$activity,recommendation-city:$city) isa personal-activity-recommendation; get; 
+
+match 
+$user has person-name "Nicolas";
+$city has city-name "San Justo"; 
+(user:$user,recommended-activity:$activity,recommendation-city:$city) isa personal-activity-recommendation; get; 
+
+#Get City general recommendations
+
+match 
+$city has city-name "Moron"; 
+(recommended-activity: $activity, recommendation-city:$city) isa city-activity-recommendation;get;
+
+match 
+$city has city-name "San Justo"; 
+(recommended-activity: $activity, recommendation-city:$city) isa city-activity-recommendation;get;
