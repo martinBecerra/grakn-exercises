@@ -2,37 +2,54 @@ define
 
 #Classes
 
-person sub entity
+Person sub entity
+has person-id
 has person-name
 plays user
 plays course-student;
 
-career sub entity
+Career sub entity
+has career-id
 has career-name
 plays chosen-career
 plays career-profile;
 
-skill sub entity
+Skill sub entity
+has skill-id
 has skill-name
 plays career-skill
 plays developed-skill
 plays needed-skill;
 
-course sub entity
+Course sub entity
+has course-id
 has course-name
 plays skill-course
 plays approved-course
 plays recommended-course;
+
 #Attributes
+
+person-id sub attribute
+datatype long;
 
 person-name sub attribute
 datatype string;
 
+career-id sub attribute
+datatype long;
+
 career-name sub attribute
 datatype string;
 
+skill-id sub attribute
+datatype long;
+
 skill-name sub attribute
 datatype string;
+
+course-id sub attribute
+datatype long;
 
 course-name sub attribute
 datatype string;
