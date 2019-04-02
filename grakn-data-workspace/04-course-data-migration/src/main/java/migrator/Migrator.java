@@ -10,10 +10,14 @@ import ai.grakn.Keyspace;
 import ai.grakn.client.Grakn;
 import ai.grakn.util.SimpleURI;
 import mjson.Json;
+import templates.ApprovedCourseRelationship;
 import templates.Career;
+import templates.CareerSkillRelationship;
 import templates.Course;
 import templates.Person;
 import templates.Skill;
+import templates.SkillCourseRelationship;
+import templates.UserCareerRelationship;
 
 
 public class Migrator {
@@ -60,6 +64,7 @@ public class Migrator {
 			tx.commit();
 			tx.close();
 		});
+		
 		System.out.println("\nInserted " + items.size() + " items from [ " + input.getDataPath() + "] into Grakn.\n");
 
 	}
@@ -71,7 +76,12 @@ public class Migrator {
 		  inputs.add(Person.template());
 		  inputs.add(Course.template());
 		  inputs.add(Career.template());
-		  inputs.add(Skill.template());
+		  inputs.add(Skill.template()); 
+		  
+		  inputs.add(ApprovedCourseRelationship.template());
+		  inputs.add(CareerSkillRelationship.template());
+		  inputs.add(SkillCourseRelationship.template());
+		  inputs.add(UserCareerRelationship.template());
 	    
 		  return inputs;
 	  }

@@ -43,4 +43,8 @@
 <fullyQualifiedTypeName name="templates.Book"/>
 <fullyQualifiedTypeName name="templates.Category"/>
 <fullyQualifiedTypeName name="templates.Editorial"/>
+<fullyQualifiedTypeName name="templates.Person"/>
+<fullyQualifiedTypeName name="templates.Course"/>
+<fullyQualifiedTypeName name="templates.Career"/>
+<fullyQualifiedTypeName name="templates.Skill"/>
 </qualifiedTypeNameHistroy>

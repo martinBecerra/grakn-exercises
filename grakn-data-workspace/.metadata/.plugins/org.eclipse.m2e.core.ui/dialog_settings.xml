@@ -8,6 +8,7 @@
 			<item value="patient-data-migration"/>
 		</list>
 		<list key="artifactId">
+			<item value="03-course-data-migration"/>
 			<item value="02-book-data-migration"/>
 			<item value="movie-data-migration"/>
 			<item value="grakn.csv"/>
