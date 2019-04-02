@@ -1,0 +1,24 @@
+
+#Explore users careers
+
+match $user isa Person has person-name $name; get $name;
+
+match $user has person-name "Pablo";
+$career has career-name $name;
+(user:$user,chosen-career:$career) isa choose-career; get $name;
+
+
+#Explore approved courses
+
+match $user isa Person has person-name $name; get $name;
+
+match $user has person-name "Daniela";
+(user:$user,approved-course:$course) has final-mark $mark isa approves-courses; get;
+
+
+#Get courses recommendations
+
+match $user has person-name "Daniela";
+(course-student:$user,recommended-course:$course) isa course-recommendation; get;
+
+

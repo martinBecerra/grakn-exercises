@@ -96,7 +96,3 @@ relates recommended-course;
 needs-develop sub relationship
 relates user
 relates needed-skill;
-
-
-
-
