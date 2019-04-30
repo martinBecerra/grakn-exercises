@@ -19,7 +19,7 @@ public class MovieWatchedRelationship {
 				return "match "
 						+ "$user isa Person has person-id "+ relation.at(USER_ID_KEY).asInteger() +  ";"
 						+ "$movie isa Movie has movie-id " + relation.at(MOVIE_ID_KEY).asInteger() + ";" 
-						+ "insert (user: $user, movie-watched: $movie) isa watch;";
+						+ "insert (user: $user, watched-movie: $movie) isa watch;";
 			}
 		};
 	}

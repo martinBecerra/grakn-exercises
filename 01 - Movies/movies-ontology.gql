@@ -6,8 +6,8 @@ Movie sub entity
 has movie-id
 has movie-name
 plays film
-plays movie-recommended
-plays movie-watched;
+plays recommended-movie
+plays watched-movie;
 
 Person sub entity
 has person-id
@@ -55,8 +55,8 @@ datatype string;
 #Roles
 
 film sub role;
-movie-recommended sub role;
-movie-watched sub role;
+recommended-movie sub role;
+watched-movie sub role;
 user sub role;
 
 cast sub role;
@@ -69,15 +69,15 @@ movie-genre sub role;
 
 movie-recommendation sub relationship
 relates user
-relates movie-recommended;
+relates recommended-movie;
 
 watch sub relationship
 relates user
-relates movie-watched;
+relates watched-movie;
 
 movie-recommendation-by-fav-actor sub relationship
 relates user
-relates movie-recommended;
+relates recommended-movie;
 
 is-cast-of-movie sub relationship
 relates cast

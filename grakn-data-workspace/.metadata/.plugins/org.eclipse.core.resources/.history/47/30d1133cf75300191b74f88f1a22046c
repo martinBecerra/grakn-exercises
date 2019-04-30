@@ -1,9 +1,0 @@
-package templates;
-
-public class Movie {
-
-	static String FILE_PATH = "/movie_files/actors";
-	static String ID_KEY    = "id";
-	static String NAME_KEY  = "name";
-	
-}

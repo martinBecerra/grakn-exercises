@@ -3,14 +3,14 @@
 match $user isa Person; get;
 
 match $user isa Person has person-name "Martin"; 
-(user:$user, movie-watched:$movie) isa watch; get;
+(user:$user, watched-movie:$movie) isa watch; get;
 
 #Explore movies recommended
 
 match $user isa Person; get;
 
 match $user isa Person has person-name "Martin"; 
-(user:$user, movie-recommended:$movie) isa movie-recommendation; get;
+(user:$user, recommended-movie:$movie) isa movie-recommendation; get;
 
 
 #Explore favorites actors
@@ -30,5 +30,5 @@ $movie has movie-name $name;get $name;
 #Explore favorites actors movies recommendation
 
 match $user isa Person has person-name "Martin"; 
-(user:$user, movie-recommended:$movie) isa movie-recommendation-by-fav-actor;
+(user:$user, recommended-movie:$movie) isa movie-recommendation-by-fav-actor;
 $movie has movie-name $name; get $name;
