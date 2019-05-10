@@ -117,8 +117,8 @@ INDEX VERSION 1.131+/Users/martinbecerra/Development/Grakn/Workspace/grakn-data-
 2097065245.index
 749174627.index
 1075666358.index
-54771766.index
 736767146.index
+54771766.index
 4174969748.index
 3492665200.index
 1926989783.index
@@ -168,7 +168,6 @@ INDEX VERSION 1.131+/Users/martinbecerra/Development/Grakn/Workspace/grakn-data-
 2617460403.index
 4043773038.index
 1463862892.index
-131585786.index
 2316670096.index
 481042487.index
 912524702.index
@@ -204,7 +203,6 @@ INDEX VERSION 1.131+/Users/martinbecerra/Development/Grakn/Workspace/grakn-data-
 1052826612.index
 301025276.index
 1326739033.index
-1885793321.index
 1198189638.index
 3937926857.index
 158552658.index
